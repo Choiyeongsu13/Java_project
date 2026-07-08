@@ -18,8 +18,8 @@ public class Exam_04 {
 		
 		System.out.print(false+"\n");
 		System.out.println("문자 입력\t" + (char)System.in.read()); 
-		System.out.println("문자 입력\t" + (char)System.in.read()); 
-		System.out.println("문자 입력\t" + System.in.read()); 
+		System.out.println("문자 입력\t" + (char)System.in.read());
+		System.out.println("문자 입력\t" + System.in.read());
 		
 	
 	
