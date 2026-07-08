@@ -20,7 +20,7 @@ public class Exam_05 {
 		int kor = scn2.nextInt();
 		int eng = scn2.nextInt();
 		int math = scn2.nextInt();
-		double avg = (kor + eng + math)/3;
+		int avg = (kor + eng + math)/3;
 		
 		System.out.println("이름은 : " + name + "\n국어 점수 : "+ kor +
 				" 영어 점수 : " +  eng + " 수학 점수 : "+ math);
