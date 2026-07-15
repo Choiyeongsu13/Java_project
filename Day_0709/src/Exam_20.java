@@ -72,8 +72,7 @@ public class Exam_20 {
 		// str = (avg>=80)? "합격":"불합격";
 		
 		System.out.println("이름\t총점\t평균\t판정\t불합격 사유");
-		System.out.printf(na +"\t"+ total +"\t"+ String.format("%.2f", avg)+"\t" +str2+"\t" + str);
-		
+		System.out.printf(na +"\t"+ total +"\t"+ String.format("%.2f", avg)+"\t" +str2+"\t" + str);		
 	}
 
 }
