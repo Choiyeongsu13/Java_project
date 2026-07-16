@@ -3,10 +3,10 @@ public class Exam_16 {
 	static int num(int a) {
 		
 				
-		if(a==0) {
+		if(a==1) {
 			return 1;
 		}
-		num(a-1);
+		
 		return a * num(a-1);
 	}
 
