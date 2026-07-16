@@ -51,6 +51,26 @@ public class Exam_06 {
 		}
 	}
 	
+	//줄단위 교환
+	
+	for (int i = 0 ; i<student.length-1; i++) {
+		for(int j =i+1; j<student.length; j++) {
+			if(student[i][0]> student[j][0]) {
+				int imsi[] = student[i];
+				student[i] =student[j];
+				student[j] = imsi;
+			}
+		}
+	}
+	
+	System.out.println("번호\t국어\t영어\t수학\t총점\t순위");
+	for(int i = 0 ; i<student.length; i ++) {
+		for(int j = 0 ; j<student.length; j++) {
+			 System.out.print(student[i][j] + "\t");
+		}
+		System.out.print ("\n");
+	}
+	
 	
 
 	}
