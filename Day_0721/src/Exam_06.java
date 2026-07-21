@@ -9,6 +9,7 @@ public class Exam_06 {
 		if(ff.max==100) {
 			
 		}
+		System.out.println(ff.pi);
 	}
 
 }
