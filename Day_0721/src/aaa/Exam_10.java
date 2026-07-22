@@ -15,7 +15,7 @@ public class Exam_10 {
 		stu1.setMath(71);
 		stu1.setGender(false);
 		int total = stu1.getEng() + stu1.getMath() + stu1.getKor();
-		double ave = (double)total /3;
+		double ave = (double)total/3;
 		
 //		if(stu1.isGender()) {
 //			System.out.print("남");

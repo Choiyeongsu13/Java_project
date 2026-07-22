@@ -3,7 +3,7 @@ package aaa;
 
 import java.util.Scanner;
 
-import kr.ac.mnu.car;
+import bbb.car;
 
 public class Exam_07 {
 

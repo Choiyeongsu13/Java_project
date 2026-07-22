@@ -1,4 +1,4 @@
-package kr.ac.mnu;
+package bbb;
 
 public class car {
 
