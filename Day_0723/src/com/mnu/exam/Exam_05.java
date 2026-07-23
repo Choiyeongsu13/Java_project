@@ -24,6 +24,12 @@ public class Exam_05 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		DD d= new ChDD(); //업 케스팅
+		System.out.println(d.a);
+//		System.out.println(d.b); //접근불가
+		
+		d.exam(); //오버라이딩된 메소드가 호출
+		
 
 	}
 
