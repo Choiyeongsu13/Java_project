@@ -7,10 +7,10 @@ public class Exam_23 {
 		int arr[] = {7,4,9,7,3,2,8};
 		int s=0;
 		int n = arr.length; //7
-		for(int i=0; i<n; i++) {
-			if(arr[i]%2 ==0) {
+		for(int i=0; i<n; i++) { //6
+			if(arr[i]%2 ==0) { //4,2,
 				continue;
-			}s+=arr[i];
+			}s+=arr[i]; //7,9,7,3,10
 		}
 		System.out.println(s);
 	}

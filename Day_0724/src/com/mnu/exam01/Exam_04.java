@@ -8,7 +8,7 @@ public class Exam_04 {
 		int m=(a>b)?a:b;
 		m=(m<c)?c:m; 
 		System.out.println(m);
-
+		
 	}
 
 }
