@@ -11,7 +11,7 @@ public class Exam_15 {
 		System.out.println(str.indexOf('a',2)); //지정 위치부터 뒤로 찾기 3 (없으면 -1)
 		
 		String str1 = "abcabc"; 
-		System.out.println(str.lastIndexOf("문자 문자열 위치 c ")); //문자열의 마지막 c 인덱스는 5
+		System.out.println(str.lastIndexOf('c')); //문자열의 마지막 c 인덱스는 5
 		System.out.println(str1.lastIndexOf("문자 문자열 위치 c ",2)); //문자열에서 인덱스 2부터 거꾸로 탐색을 했을 때, 처음나오는 c인덱스는 2
 		
 		String str2="";
