@@ -10,16 +10,16 @@ public class DBManager {
 		
 		try {//1. JDBC 드라이버 로딩 
 			Class.forName("oracle.jdbc.OracleDriver");
-			System.out.println("오라클 드라이버 로딩 성공 ");
+//			System.out.println("오라클 드라이버 로딩 성공 ");
 			
 			//2. Connection 객체 생성
 			conn = DriverManager.getConnection(myURL,"C##TEST","1234");
-			System.out.println("커넥션 연결 로딩 성공 ");
+//			System.out.println("커넥션 연결 로딩 성공 ");
 		} catch (ClassNotFoundException ce) {
 			ce.printStackTrace();
 		}catch (SQLException se) {
 			se.printStackTrace();
-			System.out.println("드라이버 로딩 실패 ");
+//			System.out.println("드라이버 로딩 실패 ");
 		} 
 		
 		return conn;
