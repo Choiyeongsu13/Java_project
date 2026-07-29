@@ -31,6 +31,8 @@ public class DbExam_01 {
 			
 		}catch(Exception e) {
 			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt, rs);
 		}
 		
 	}
