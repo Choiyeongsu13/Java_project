@@ -1,0 +1,27 @@
+EMP (사원정보 테이블)
+
+ENO(PK) 사원번호 정수
+ENAME 사원이름 문자
+JOB 업무명 문자
+MANAGER 사원의 상사번호 정수
+
+HIREDATE 입사일 날자
+SALARY 급여 정수
+COMMISSION 커미션 정수
+DNO(FK) 부서번호 정수
+
+------------------------
+
+DEPT(부서정보 테이블)
+
+DNO(PK) 부서번호 정수
+DNAME 부서명 (문자)
+LOC 지역명 (문자)
+
+---------------
+
+SAL(급여정보 테이블)
+
+GRADE 급여등급 정수
+LOSAL 급여 하한 값 정수
+HISAL 급여 상한 값 정수
