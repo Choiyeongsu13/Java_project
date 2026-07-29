@@ -1,41 +1,46 @@
-package com.mnu.exam02;
+package com.mnu.exam03;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 
 import com.mnu.util.DBManager;
 
-public class DbExam_03 {
+public class DbExam_09 {
 
 	public static void main(String[] args) {
 		//키보드로 부서번호 입력
-		String loc = "목포";
-		String dname = "인사";
-		int dno = 50;
+		//dno,dname,job,hiredate,salary
+		int eno = 1234;
+//		String ename = "김시원";
+//		String job = "영업";
+//		String hiredate = "2026/07/29";
+//		int salary = 2750*10;
+		
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "INSERT INTO DEPT(DNO,DNAME,LOC) VALUES(?,?,?)";
+		String sql = ("delete from emp where eno=?");
+		
 ;		try {
 			conn = DBManager.getConnection();
+		
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, dno);
-			pstmt.setString(2, dname);
-			pstmt.setString(3, loc);
 			
-			int row = pstmt.executeUpdate(); //INSERT UPDATE DELETE
+			pstmt.setInt(1, eno);
 			
+			
+			int row = pstmt.executeUpdate();
 			System.out.print(row);
-//			System.out.print(row.etInt("dno")+"\t");
-//			System.out.print("dname"+"\t");
-//			System.out.print("loc"+"\n");
+
 			
 			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
+			
 			DBManager.close(conn, pstmt);
 		}
 		
