@@ -16,7 +16,7 @@ import java.util.Scanner;
  * [처리 조건]
  * 5명 입력, 동일한 번호가 있는 경우 "이미 등록된 학생입니다" 출력 후 재입력
  */
-public class Exam_06 {
+public class Exam_07 {
 
 	public static void main(String[] args) {
 		List<Student> stu = new ArrayList();
@@ -25,16 +25,17 @@ public class Exam_06 {
 		int avg;
 		
 		for(int i =0 ; i<3; i++) {
+		Student stu1 = new Student();
 		System.out.print("학생 정보 입력 : ");
-		int bun = sc.nextInt();
-		String name = sc.next();
-		int kor = sc.nextInt();
-		int eng = sc.nextInt();
-		int math = sc.nextInt();
+		stu1.setBun( sc.nextInt());
+		stu1.setName(sc.next());
+		stu1.setKor(sc.nextInt());
+		stu1.setEng(sc.nextInt());
+		stu1.setMath(sc.nextInt());
 		//중복 검사
 		boolean bool = false;
 		for(int x=0;x<stu.size(); x++) {
-			if(bun==stu.get(x).getBun()) {
+			if(stu1.getBun()==stu.get(x).getBun()) {
 				System.out.println("같은 학번 입력 확인, 재입력 ");
 				bool = true;
 				break;
@@ -44,9 +45,7 @@ public class Exam_06 {
 				i--;
 				continue;
 			}
-//			Student stu1 = new Student(bun, name, kor, eng, math);
-//			stu.add(stu1);
-			stu.add(new Student(bun, name, kor, eng, math));
+			stu.add(stu1);
 		}
 
 		System.out.print("학번\t이름\t국어\t영어\t수학\t총점\t평균\n");
