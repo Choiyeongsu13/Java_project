@@ -1,6 +1,6 @@
 package com.mnu.model;
 
-public class Money_DAO {
+public class Money_DTO {
 	private int saleno;
 	private int custno;
 	private String pcode;
@@ -9,9 +9,9 @@ public class Money_DAO {
 	private String sdate;
 	
 	
-	public Money_DAO() {}
+	public Money_DTO() {}
 
-	public Money_DAO(int saleno, int custno, String pcode, int amount, int price) {
+	public Money_DTO(int saleno, int custno, String pcode, int amount, int price) {
 		this.saleno=saleno;
 		this.custno=custno;
 		this.pcode=pcode;
