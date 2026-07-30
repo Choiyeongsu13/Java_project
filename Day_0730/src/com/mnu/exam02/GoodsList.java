@@ -20,7 +20,6 @@ public class GoodsList {
 				System.out.print(gto.getPname()+ "\t");
 				System.out.print(gto.getPcost()+ "\t");
 				System.out.print(gto.getStock()+ "\n");
-			
 		}
 	}
 

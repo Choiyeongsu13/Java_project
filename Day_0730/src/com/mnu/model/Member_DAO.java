@@ -89,6 +89,34 @@ public class Member_DAO {
 		return mList;
 		
 	}
+	//회원정보 검색(회원번호)
+	public Member_DTO memberSearch(int custno) {
+		Member_DTO dto = new Member_DTO();
+		String sql="select * from TBL_MEMBER where custno=?";
+		try {
+			conn = DBManager.getConnection();
+			pstmt= conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, custno);
+			
+			rs= pstmt.executeQuery();
+			if(rs.next()) {
+				dto.setCustno(rs.getInt("custno"));
+				dto.setCustname(rs.getString("custname"));
+				dto.setPhone(rs.getString("phone"));
+				dto.setGender(rs.getString("gender"));
+				dto.setGrade(rs.getString("grade"));
+				dto.setJoindata(rs.getString("joindate"));
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+		return dto;
+		
+	}
 	
 	
 	
