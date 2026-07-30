@@ -46,10 +46,6 @@ public class Exam_06 {
 			}
 			Student stu1 = new Student(bun, name, kor, eng, math);
 			stu.add(stu1);
-			
-		
-		
-
 		}
 
 		System.out.print("학번\t이름\t국어\t영어\t수학\t총점\t평균");
@@ -65,11 +61,6 @@ public class Exam_06 {
 		System.out.print(tot+ "\t");
 		System.out.print(avg+ "\t");
 		}
-		
-		
-
-		
-		
 	}
 
 }
