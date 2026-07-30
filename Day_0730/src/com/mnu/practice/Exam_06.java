@@ -48,7 +48,7 @@ public class Exam_06 {
 			stu.add(stu1);
 		}
 
-		System.out.print("학번\t이름\t국어\t영어\t수학\t총점\t평균");
+		System.out.print("학번\t이름\t국어\t영어\t수학\t총점\t평균\n");
 		for(Student s : stu) {
 		
 		System.out.print(s.getBun() + "\t");
@@ -59,7 +59,7 @@ public class Exam_06 {
 		tot = s.getKor() + s.getEng()+ s.getMath(); 
 		avg = tot/3;
 		System.out.print(tot+ "\t");
-		System.out.print(avg+ "\t");
+		System.out.print(avg+ "\n");
 		}
 	}
 
