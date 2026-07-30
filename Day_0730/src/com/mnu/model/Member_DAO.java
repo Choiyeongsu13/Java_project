@@ -3,6 +3,8 @@ package com.mnu.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.mnu.util.DBManager;
 
@@ -48,6 +50,44 @@ public class Member_DAO {
 		}
 		return row;
 				
+	}
+	
+	//2 회원전체 목록 검색 메소드
+	
+	public List<Member_DTO> memberlist(){
+		// 반환타입
+		List<Member_DTO> mList = new ArrayList();
+		//쿼리
+		String sql="select custno,custname,phone,gender,grade,c.cityname,joindate \r\n"
+				+ "from tbl_member m join tbl_city c on m.city=c.city";
+		try {conn= DBManager.getConnection();
+		pstmt = conn.prepareStatement(sql);
+		
+		rs= pstmt.executeQuery(); //select일 경우에만
+		
+		while(rs.next()) {
+			Member_DTO dto = new Member_DTO();
+			dto.setCustno(rs.getInt("custno"));
+			dto.setCustname(rs.getString("custname"));
+			dto.setPhone(rs.getString("phone"));
+			dto.setGender(rs.getString("gender"));
+			dto.setGrade(rs.getString("grade"));
+			dto.setCityname(rs.getString("cityname"));
+			dto.setJoindata(rs.getString("joindate"));
+	
+			
+			
+			
+			mList.add(dto);
+		}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+		return mList;
+		
 	}
 	
 	

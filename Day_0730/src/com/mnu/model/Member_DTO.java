@@ -14,13 +14,14 @@ public class Member_DTO {
 	
 	public Member_DTO() {}
 	
-	public Member_DTO(int custno,String custname, String phone, String gender, String grade, String city) {
+	public Member_DTO(int custno,String custname, String phone, String gender, String grade, String city,String joindata) {
 		this.custno=custno;
 		this.custname=custname;
 		this.phone=phone;
 		this.gender=gender;
 		this.grade=grade;
 		this.city= city;
+		this.joindata=joindata;
 		
 	}
 
