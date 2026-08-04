@@ -16,28 +16,11 @@ public class Student {
 		this.eng=eng;
 		this.math=math;	
 	}
-	public void Student1(int tot,double avg) {
-		this.tot=tot;
-		this.avg=avg;
-		tot=kor+eng+math;
-		avg=(double)tot/3;
-	}
 
-	public int getTot() {
-		return tot;
-	}
 
-	public void setTot(int tot) {
-		this.tot = tot;
-	}
+	
 
-	public double getAvg() {
-		return avg;
-	}
 
-	public void setAvg(double avg) {
-		this.avg = avg;
-	}
 
 	public int getBun() {
 		return bun;

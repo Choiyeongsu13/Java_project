@@ -11,11 +11,11 @@ public class Exam_10 {
 		Stack<Student> stu = new Stack<Student>();
 		
 		//stk.push(111,"김학생",100,100,100);
-		stu.push(new Student(1,"김학생",100,100,100));
-		stu.push(new Student(2,"저학생",100,100,100));
+		stu.push(new Student(5,"김학생",100,100,100));
+		stu.push(new Student(4,"저학생",100,100,100));
 		stu.push(new Student(3,"이학생",100,100,100));
-		stu.push(new Student(4,"소학생",100,100,100));
-		stu.push(new Student(5,"고학생",100,100,100));
+		stu.push(new Student(2,"소학생",100,100,100));
+		stu.push(new Student(1,"고학생",100,100,100));
 		System.out.print("번호\t이름\t국어\t영어\t수학\t총점\t평균\n");
 		while(!stu.isEmpty()) {
 		Student st = stu.pop();
