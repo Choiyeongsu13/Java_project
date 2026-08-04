@@ -87,5 +87,38 @@ public class EmpDAO {
 
 		return list;
 	}
+	
+	public List<EmpDTO> nameList(String str){
+		List<EmpDTO> list = new ArrayList<EmpDTO>();
+
+		String sql = "select * from emp where ename like ?";
+
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,"%" + str + "%");
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				EmpDTO dto = new EmpDTO();
+				dto.setEno(rs.getInt("eno"));
+				dto.setEname(rs.getString("ename"));
+				dto.setHiredate(rs.getString("hiredate"));
+				dto.setSalary(rs.getInt("salary"));
+				dto.setJob(rs.getString("job"));
+				dto.setCommission(rs.getInt("commission"));
+				dto.setManager(rs.getInt("manager"));
+				dto.setDno(rs.getInt("dno"));
+				list.add(dto);
+			}
+
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			DBManager.close(conn, pstmt, rs);
+		}
+
+		return list;
+	}
 
 }
