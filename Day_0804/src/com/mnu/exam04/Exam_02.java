@@ -17,7 +17,7 @@ public class Exam_02 {
 
 		// 부서번호 부서명 사원번호 이름 입사일 급여 출력
 		EmpDAO dao = EmpDAO.getInstance();
-		List<commDTO> list = dao.deptList(custno);   // SQL에서 이미 부서번호로 필터링됨
+		List<commDTO> list = dao.deptList(custno);   
 
 		System.out.println("부서번호\t부서명\t사원번호\t이름\t입사일\t급여");
 		for (commDTO dto : list) {

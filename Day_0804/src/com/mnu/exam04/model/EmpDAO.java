@@ -54,7 +54,7 @@ public class EmpDAO {
 		return list;
 	}
 
-	// 부서번호로 필터링한 목록
+	// 부서번호 목록
 	public List<commDTO> deptList(int dno){
 		List<commDTO> list = new ArrayList<commDTO>();
 
@@ -64,7 +64,7 @@ public class EmpDAO {
 		try {
 			conn = DBManager.getConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, dno);   // ? 자리에 값 채우기
+			pstmt.setInt(1, dno);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				commDTO dto = new commDTO();
