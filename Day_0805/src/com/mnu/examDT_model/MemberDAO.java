@@ -256,6 +256,44 @@ public class MemberDAO {
 					DBManager.close(conn, pstmt);
 				}return row;
 			}
+			public int memberalterSeq(MemberDTO dto) {
+				int row = 0;
+				String sql="update tbl_member set phone =? ,gender =? ,grade=?, city = ? where custno = ?";
+				
+				try {
+					conn=DBManager.getConnection();
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setInt(5, dto.getCustno());
+					pstmt.setString(1, dto.getPhone());
+					pstmt.setString(2, dto.getGender());
+					pstmt.setString(3, dto.getGrade());
+					pstmt.setString(4, dto.getCity());
+					row= pstmt.executeUpdate();
+					
+				}catch(Exception e){
+					e.printStackTrace();
+				}finally {
+					DBManager.close(conn, pstmt);
+				}return row;
+			}
+			public int memberdelete(MemberDTO dto) {
+				int row = 0;
+				String sql="delete from tbl_member where custno = ?";
+				
+				try {
+					conn=DBManager.getConnection();
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setInt(1, dto.getCustno());
+		
+					row= pstmt.executeUpdate();
+					
+				}catch(Exception e){
+					e.printStackTrace();
+				}finally {
+					DBManager.close(conn, pstmt);
+				}return row;
+			}
+		
 			
 		
 		
